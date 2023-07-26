@@ -1,1 +1,3 @@
+
+I am editing this file for trial.
 This is file.txt
