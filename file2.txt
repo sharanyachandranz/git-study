@@ -1,2 +1,3 @@
 This is file2.txt
 editing locally
+This line wAS added in github
