@@ -1,19 +1,17 @@
-
 name: Release Workflow
 on:
   create:
     tags:
       - 'v*'
-  push:
-    paths-ignore:
-      - 'release_history.txt'
+permissions:
+  contents: write
 
 jobs:
   update_file:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the code
-        uses: actions/checkout@v2
+        uses: actions/checkout@main
 
       - name: Update release_history.txt
         run: |
@@ -25,4 +23,4 @@ jobs:
           git config --local user.name "sharanyachandranz"
           git add .
           git commit -m "Update release_history.txt on release tag"
-          git push --set-upstream origin
+          git push
