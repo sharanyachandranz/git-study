@@ -19,6 +19,6 @@ jobs:
         run: |
           git config --local user.email "sharanyachandranz@github.com"
           git config --local user.name "sharanyachandranz"
-          git add file1.txt
+          git add release_history.txt
           git commit -m "Update release_history.txt on release tag"
           git push
