@@ -22,4 +22,4 @@ jobs:
           git branch --set-upstream-to origin/the_master
           git add release_history.txt
           git commit -m "Update release_history.txt on release tag"
-          git push origin HEAD:master
+          git push origin HEAD:main
