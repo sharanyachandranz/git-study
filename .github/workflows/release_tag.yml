@@ -5,16 +5,13 @@ on:
       - 'v*'
 permissions:
   contents: write
-  push:
-    paths-ignore:
-      - 'release_history.txt'
 
 jobs:
   update_file:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the code
-        uses: actions/checkout@main
+        uses: actions/checkout@v2
 
       - name: Update release_history.txt
         run: |
