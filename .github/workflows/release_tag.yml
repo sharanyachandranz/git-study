@@ -1,8 +1,12 @@
+
 name: Release Workflow
 on:
   create:
     tags:
       - 'v*'
+  push:
+    paths-ignore:
+      - 'release_history.txt'
 
 jobs:
   update_file:
