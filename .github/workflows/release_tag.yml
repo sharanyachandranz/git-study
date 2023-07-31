@@ -19,7 +19,6 @@ jobs:
         run: |
           git config --local user.email "sharanyachandranz@github.com"
           git config --local user.name "sharanyachandranz"
-          git checkout main
-          git add release_history.txt
+          git add .
           git commit -m "Update release_history.txt on release tag"
-          git push --set-upstream origin main
+          git push --set-upstream origin
