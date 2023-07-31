@@ -1,0 +1,24 @@
+name: Update File on Release Tag
+on:
+  release:
+    types:
+      - created
+
+jobs:
+  update_file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v2
+
+      - name: Update file1.txt
+        run: |
+          echo "....updating file1.txt to understand GITHUB workflow" >> file1.txt
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "sharanyachandranz@github.com"
+          git config --local user.name "sharanyachandranz"
+          git add file1.txt
+          git commit -m "Update file1.txt on release tag"
+          git push
